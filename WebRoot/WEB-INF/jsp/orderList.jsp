@@ -34,6 +34,9 @@
 		</div>
 
 		<%@ include file="menu.jsp"%>
+		<script>
+			//document.getElementById('recommendSpan').style.display="none";
+		</script>
 
 	</div>
 

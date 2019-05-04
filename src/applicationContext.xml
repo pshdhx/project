@@ -56,6 +56,9 @@
 					<value>cn/itcast/shop/order/vo/Order.hbm.xml</value>
 					<value>cn/itcast/shop/order/vo/OrderItem.hbm.xml</value>
 					<value>cn/itcast/shop/adminuser/vo/AdminUser.hbm.xml</value>
+					<value>cn/itcast/shop/uservisit/vo/Uservisit.hbm.xml</value>
+					<value>cn/itcast/shop/uservisit/vo/Record.hbm.xml</value>
+					<value>cn/itcast/shop/uservisit/vo/Similar.hbm.xml</value>
 				</list>
 			</property>
 	</bean>
@@ -92,9 +95,11 @@
 		<bean id="userAction" class="cn.itcast.shop.user.action.UserAction" scope="prototype">
 			<!-- 在action中注入service -->
 			<property name="userService" ref="userService"></property>
+			<property name="productService" ref="productService"></property>
+			
 		</bean>
 		
-		
+		<bean id="uservisit" class="cn.itcast.shop.uservisit.vo.Uservisit"></bean>
 		<!-- 商品模块的Action -->
 		<bean id="productAction" class="cn.itcast.shop.product.action.ProductAction" scope="prototype">
 			<property name="productService" ref="productService"/>

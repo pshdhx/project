@@ -1,0 +1,77 @@
+.main{
+	top:72.5%;
+	width:900px;
+}
+ul{
+			margin:0;
+			padding: 0;
+			list-style: none;
+		}
+		.play-box{
+			position: relative;
+			margin:100px auto;
+			width: 775px;
+			border:1px solid #ccc;
+			background:#fff;
+		}
+		.play-box img{
+			width: 775px;
+			height: 340px;
+			border:0;
+		}
+		.play-box a{
+			display: block;
+			overflow: hidden;
+			opacity: 0;
+			height: 0;
+			transition: opacity .5s;
+		} 
+		.play-box a.current{
+			//display: block;
+
+			opacity: 1;
+			height: auto;
+		}
+		#iconList{
+			position: absolute;
+			left: 50%;
+			bottom: 10px;
+			top: 90%;
+			margin-left: -45px;
+		}
+		#iconList li{
+			float: left;
+			margin: 0 4px;
+			width: 10px;
+			height:10px;
+			border-radius: 50%;
+			background-color: #fff;
+			cursor: pointer;
+			font-size: 0;
+		}
+		#iconList li.current{
+			background-color: red;
+		}
+		.slidebar{
+			position: absolute;
+			top: 50%;
+			margin-top: -25px;
+			width: 30px;
+			height: 50px;
+			color:#fff;
+			text-align: center;
+			line-height: 50px;
+			background-color: #000;
+			opacity: .6;
+			filter: alpha(opacity=60);
+			cursor: pointer;
+
+		}
+		.slidebar-left{
+			left: 0;
+			cursor: pointer;
+		}
+		.sliderbar-right{
+			right: 0;
+			cursor: pointer;
+		}

@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>网上商城</title>
+<title>tiny netMarket</title>
 <link href="${pageContext.request.contextPath}/css/common.css" rel="stylesheet" type="text/css">
 <link href="${pageContext.request.contextPath}/css/product.css" rel="stylesheet" type="text/css">
 
@@ -15,20 +15,18 @@
 </head>
 <body>
 
+
 <div class="container header">
-	<div class="span5">
-		<div class="logo">
-			<a>
-				<img src="${pageContext.request.contextPath}/image/r___________renleipic_01/logo.gif" alt="传智播客">
-			</a>
-		</div>
-	</div>
+	
 	<div class="span9">
-<div class="headerAd">
-					<img src="image\r___________renleipic_01/header.jpg" alt="正品保障" title="正品保障" height="50" width="320">
-</div>	</div>
+<div class="headerAd" style="background-color:red;display:none;">
+</div>	
+</div>
 	
 	<%@include file="menu.jsp" %>
+	<script>
+			document.getElementById('recommendSpan').style.display="none";
+		</script>
 
 </div><div class="container productContent">
 		<div class="span6">

@@ -67,6 +67,7 @@
 			<result name="findByPid">/WEB-INF/jsp/product.jsp</result>
 			<result name="findByCid">/WEB-INF/jsp/productList.jsp</result>
 			<result name="findByCsid">/WEB-INF/jsp/productList.jsp</result>
+			<result name="findBySearchPname">/WEB-INF/jsp/productByPname.jsp</result>
 		</action>
 		
 		<!-- 购物车的Action -->

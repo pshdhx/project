@@ -3,6 +3,7 @@ package cn.itcast.shop.product.vo;
 import java.util.Date;
 
 import cn.itcast.shop.categorysecond.vo.CategorySecond;
+import cn.itcast.shop.uservisit.vo.Similar;
 
 /**
  * 
@@ -19,6 +20,8 @@ public class Product {
 	private Integer is_hot;
 	private Date pdate;
 	private CategorySecond categorySecond;
+	private Integer pvisitcount;
+	
 	
 	public CategorySecond getCategorySecond() {
 		return categorySecond;
@@ -74,6 +77,13 @@ public class Product {
 	public void setPdate(Date pdate) {
 		this.pdate = pdate;
 	}
+	public Integer getPvisitcount() {
+		return pvisitcount;
+	}
+	public void setPvisitcount(Integer pvisitcount) {
+		this.pvisitcount = pvisitcount;
+	}
+	
 	
 	//二级分类的外键，使用二级分类的对象
 }

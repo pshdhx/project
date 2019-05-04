@@ -13,18 +13,13 @@
 
 </head>
 <body>
+
 <div class="container header">
-	<div class="span5">
-		<div class="logo">
-			<a href="http://localhost:8080/mango/">
-				<img src="${pageContext.request.contextPath}/image/r___________renleipic_01/logo.gif" alt="传智播客">
-			</a>
-		</div>
-	</div>
+	
 	<div class="span9">
-<div class="headerAd">
-					<img src="${pageContext.request.contextPath}/image/header.jpg" width="320" height="50" alt="正品保障" title="正品保障">
-</div>	</div>
+<div class="headerAd" style="background-color:red;display:none;">
+</div>	
+</div>
 	<%@ include file="menu.jsp" %>
 	
 </div>	<div class="container cart">

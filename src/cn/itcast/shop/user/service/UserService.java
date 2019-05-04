@@ -1,9 +1,15 @@
 package cn.itcast.shop.user.service;
 
+import java.util.List;
+
 import org.springframework.transaction.annotation.Transactional;
 
+import cn.itcast.shop.product.vo.Product;
 import cn.itcast.shop.user.dao.UserDao;
 import cn.itcast.shop.user.vo.User;
+import cn.itcast.shop.uservisit.vo.Record;
+import cn.itcast.shop.uservisit.vo.Similar;
+import cn.itcast.shop.uservisit.vo.Uservisit;
 import cn.itcast.shop.utils.MailUtils;
 import cn.itcast.shop.utils.UUIDUtil;
 
@@ -50,4 +56,130 @@ public class UserService {
 		// TODO Auto-generated method stub
 		return userDao.login(user);
 	}
+
+	public Uservisit findByUvuserid(int i) {
+		return userDao.findByUvuserid(i);
+	}
+
+	public Uservisit findByActuralUvuserid(Integer uid) {
+		// TODO Auto-generated method stub
+		return userDao.findByActuralUvuserid(uid);
+	}
+
+	public void saveUservisit(Uservisit uservisit) {
+		// TODO Auto-generated method stub
+		userDao.saveUservisit(uservisit);
+	}
+
+	public Record findByRUid(Integer uid) {
+		// TODO Auto-generated method stub
+		return userDao.findByRUid(uid);
+	}
+
+	public int findCount() {
+		// TODO Auto-generated method stub
+		return userDao.findCount();
+	}
+
+	public void saveRecord(Record saveRecord) {
+		// TODO Auto-generated method stub
+		userDao.saveRecord(saveRecord);
+	}
+
+	public List<Record> findReByUid(Integer uid) {
+		return userDao.finReByUid(uid);
+	}
+
+	
+	//判断similar表中是否有similarvalue的值
+	public List<Similar> findSimilarvalueByUid(Integer uid) {
+		// TODO Auto-generated method stub
+		return userDao.findSimilarvalueByUid(uid);
+	}
+
+	public List<Record> getRecordList(Integer refuid,Integer existUserId) {
+		// TODO Auto-generated method stub
+		return userDao.getRecordList(refuid,existUserId);
+	}
+
+	public List<Product> getTopNProduct(Integer csid) {
+		// TODO Auto-generated method stub
+		return userDao.getTopNProduct(csid);
+	}
+
+	public List<Record> getMaxCsidInRecordByCsidvisit(Integer uid) {
+		// TODO Auto-generated method stub
+		return userDao.getMaxCsidInRecordByCsidvisit(uid);
+	}
+	
+	/**
+	 * 查询在Record表中有多少个不同uid的记录
+	 */
+	public Integer getUserCount() {
+		// TODO Auto-generated method stub
+		return userDao.getUserCount();
+	}
+	/**
+	 * 判断登录用户的uid是否在similar表里边
+	 * @param uid
+	 */
+	public List<Similar> existSimilarByUid(Integer uid) {
+		// TODO Auto-generated method stub
+		return userDao.existSimilarByUid(uid);
+	}
+	/**
+	 * 取出Record其他uid的值作为refuid
+	 * @param uid
+	 */
+	public List<Integer> getOtherUidRecord(Integer uid) {
+		// TODO Auto-generated method stub
+		return userDao.getOtherUidRecord(uid);
+	}
+	/**
+	 * 添加保存初始化的Similar记录
+	 * @param similar
+	 */
+	public void initSimilar(Similar similar) {
+		// TODO Auto-generated method stub
+		userDao.initSimilar(similar);
+	}
+
+	public List<Integer> getRefuid(Integer uid) {
+		// TODO Auto-generated method stub
+		return userDao.getRefuid(uid);
+	}
+
+	public List<Integer> getAddRef(Integer uid) {
+		// TODO Auto-generated method stub
+		return userDao.getAddRef(uid);
+	}
+	/**
+	 * 当目标记录为null时，应该显示的结果为 相似度最大的用户的csid的最大值
+	 * @param refuid
+	 */
+	public List<Record> getNullProduct(Integer refuid) {
+		// TODO Auto-generated method stub
+		return userDao.geNullProduct(refuid);
+	}
+
+	public List<Product> getRecommendProductList(Integer csid) {
+		// TODO Auto-generated method stub
+		return userDao.getRecommendProductList(csid);
+	}
+
+	public List<Product> getMaxHit() {
+		// TODO Auto-generated method stub
+		return userDao.getMaxHit();
+	}
+
+	
+
+	
+	
+
+	
+
+	
+	
+	
 }
