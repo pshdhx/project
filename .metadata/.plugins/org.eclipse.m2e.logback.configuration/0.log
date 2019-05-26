@@ -1,0 +1,17 @@
+2019-05-23 12:38:02,512 [Worker-8] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-05-23 12:38:14,738 [Worker-1] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updating index for repository: central|https://repo.maven.apache.org/maven2
+2019-05-23 12:39:01,064 [Worker-17] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updated local repository index
+2019-05-23 12:41:46,909 [Worker-11] INFO  j.exodus.env.EnvironmentImpl - Exodus environment created: E:\workSpace\shop01\.metadata\com.genuitec.eclipse.webclipse.livepreview\0\store
+2019-05-23 12:41:47,049 [Worker-11] INFO  j.exodus.env.EnvironmentImpl - Exodus environment created: E:\workSpace\shop01\.metadata\com.genuitec.eclipse.webclipse.livepreview\1\store
+2019-05-23 12:44:55,428 [Worker-1] ERROR o.e.m.c.i.i.nexus.NexusIndexManager - Unable to update index for central|https://repo.maven.apache.org/maven2
+org.eclipse.core.runtime.OperationCanceledException: null
+	at org.eclipse.m2e.core.internal.index.nexus.AetherClientResourceFetcher.retrieve(AetherClientResourceFetcher.java:90) ~[org.eclipse.m2e.core_1.7.0.me201611191457.jar:na]
+	at org.apache.maven.index.updater.AbstractResourceFetcher.retrieve(AbstractResourceFetcher.java:35) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.apache.maven.index.updater.DefaultIndexUpdater$LocalCacheIndexAdaptor.setIndexFile(DefaultIndexUpdater.java:700) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.fetchAndUpdateIndex(DefaultIndexUpdater.java:829) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.fetchAndUpdateIndex(DefaultIndexUpdater.java:135) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager.updateRemoteIndex(NexusIndexManager.java:1238) [org.eclipse.m2e.core_1.7.0.me201611191457.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager.updateIndex(NexusIndexManager.java:1193) [org.eclipse.m2e.core_1.7.0.me201611191457.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager$1.run(NexusIndexManager.java:703) [org.eclipse.m2e.core_1.7.0.me201611191457.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.IndexUpdaterJob.run(IndexUpdaterJob.java:72) [org.eclipse.m2e.core_1.7.0.me201611191457.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55) [org.eclipse.core.jobs_3.8.0.v20160509-0411.jar:na]

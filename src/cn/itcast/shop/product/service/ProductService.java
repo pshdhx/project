@@ -284,6 +284,11 @@ public class ProductService {
 			return productDao.getVisitpid(uid);
 		}
 
+		public List<Product> findMaxHit() {
+			// TODO Auto-generated method stub
+			return productDao.findMaxHit();
+		}
+
 		/*public void upteSimilar(Double similarvalue, Integer uid, Integer refuid) {
 			// TODO Auto-generated method stub
 			productDao.updateSimilar(similarvalue,uid,refuid);

@@ -45,9 +45,12 @@ public class IndexAction extends ActionSupport{
 		//查询最新商品
 		List<Product> nList = productService.findNew();
 		ActionContext.getContext().getValueStack().set("nList",nList);	//这是值栈	【最新商品只在一个界面中，用值栈】
+		
+		
+		//查询点击量最大的商品
+		List<Product> maxHit = productService.findMaxHit();
+		ActionContext.getContext().getValueStack().set("maxHit",maxHit);
 		return "index";
-		
-		
 		
 	}
 }

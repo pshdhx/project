@@ -38,13 +38,14 @@ public class Arithmetic {
 				res = fenzi/fenmu;
 			}
 			//System.out.println("j========"+j);
-			System.out.println(res+"=="+"解决===="+l2.get(j*l1.size()-1).getUid()+"每次点击商品，similar表进行更新");
+			//System.out.println(res+"=="+"解决===="+l2.get(j*l1.size()-1).getUid()+"每次点击商品，similar表进行更新");
 			Integer refuid = l2.get(j*l1.size()-1).getUid();
 			Double similarvalue=res;
 			Similar similar = new Similar();
 			similar.setUid(l1.get(0).getUid());
 			similar.setRefuid(refuid);
 			similar.setSimilarvalue(similarvalue);
+			System.out.println("用户"+similar.getUid()+"与用户"+similar.getRefuid()+"的相似度为"+similar.getSimilarvalue());
 			similarList.add(similar);
 		}
 		return similarList;

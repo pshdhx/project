@@ -41,7 +41,7 @@ public class MailUtils {
 			//抄送cc：密送bcc
 			message.setSubject("来自购物商城的激活邮件！");
 			//设置邮件的正文
-			message.setContent("<h1>来自购物商城的激活邮件，点击下方的链接进行账户激活操作</h1><br/><h3><a href='http://192.168.0.104/shop/user_active.action?code="+code+"'>http://192.168.0.104/shop/user_active.action?code="+code+"</a></h3>", "text/html;charset=UTF-8");
+			message.setContent("<h1>来自购物商城的激活邮件，点击下方的链接进行账户激活操作</h1><br/><h3><a href='http://localhost/shop/user_active.action?code="+code+"'>http://192.168.0.104/shop/user_active.action?code="+code+"</a></h3>", "text/html;charset=UTF-8");
 			//发送邮件
 			Transport.send(message);
 		} catch (AddressException e) {

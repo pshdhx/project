@@ -271,11 +271,16 @@
 						<s:if test="#session.existUser == null">
 						000000000000000为未登录状态
 						 <ul class="tabContent" style="display: block;">
-									<c:forEach var="p" items="RecommendProductList2">
+									<%-- <c:forEach var="p" items="RecommendProductList2">
 									<li>
 										<a href="${ pageContext.request.contextPath}/product_findByPid.action?pid=<s:property value="#p.pid"/>" target="_blank"><img src="${pageContext.request.contextPath}/<s:property value="#p.image"/>" data-original="http://storage.shopxx.net/demo-image/3.0/201301/4a51167a-89d5-4710-aca2-7c76edc355b8-thumbnail.jpg" style="display: block;"></a>	
 									</li>
-									</c:forEach>
+									</c:forEach> --%>
+									<s:iterator var="p" value="maxHit">
+									<li>
+										<a href="${ pageContext.request.contextPath}/product_findByPid.action?pid=<s:property value="#p.pid"/>" target="_blank"><img src="${pageContext.request.contextPath}/<s:property value="#p.image"/>" data-original="http://storage.shopxx.net/demo-image/3.0/201301/4a51167a-89d5-4710-aca2-7c76edc355b8-thumbnail.jpg" style="display: block;"></a>	
+									</li>
+									</s:iterator>
 							
 						</ul>
 						</s:if>

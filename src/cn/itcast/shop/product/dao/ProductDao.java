@@ -3,6 +3,7 @@ package cn.itcast.shop.product.dao;
 import java.util.List;
 
 import org.apache.struts2.ServletActionContext;
+import org.hibernate.Query;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
@@ -371,6 +372,21 @@ public class ProductDao extends HibernateDaoSupport{
 		// TODO Auto-generated method stub
 		List<Uservisit> list = this.getHibernateTemplate().find("from Uservisit where uvuid = ?", uid);
 		return list;
+	}
+
+
+
+
+
+	public List<Product> findMaxHit() {
+		// TODO Auto-generated method stub
+		String sql = "select * from Product order by pvisitcount desc limit 0,5";
+		Query query = null;
+		query = this.getSession().createSQLQuery(sql).addEntity(Product.class);
+		List<Product> maxHit = query.list();
+		//List<Product> list = this.getHibernateTemplate().find(hql,csid);
+		
+		return maxHit;
 	}
 
 
